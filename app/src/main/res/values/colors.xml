@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="fingerprint_color">#00FFFFFF</color>
+
     <color name="gray_progress_bar">#E7E0DA</color>
     <color name="gray_progress_bar_stroke">#D3CFCA</color>
     <color name="orange_progress_bar">#EF8E1F</color>
