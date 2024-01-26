@@ -5,5 +5,9 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="CustomProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/custom_progress_four_circles</item>
+    </style>
+
     <style name="Theme.Components" parent="Base.Theme.Components" />
 </resources>

@@ -41,19 +41,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        checkBiometricSupport()
+        animateProgressBarCircle()
+        //checkBiometricSupport()
         binding.buttonCardFingerprint.setOnClickListener {
-            configurationBiometricPrompt()
+            //configurationBiometricPrompt()
+            animateProgressBarCircle()
         }
-
-
-
 
     }
 
-    private fun other(){
-        val progressAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0, 60)
+    private fun animateProgressBarCircle() {
+        val progressAnimator = ObjectAnimator.ofInt(binding.progressBar1, "progress", 0, 60)
+        val progressAnimator2 = ObjectAnimator.ofInt(binding.progressBar2, "progress", 0, 100)
+        progressAnimator.duration = 1000 // Duración de la animación en milisegundos
+        progressAnimator2.duration = 1000
+        progressAnimator2.start()
+        progressAnimator.start()
+    }
+    private fun animeProgressBar(){
+        val progressAnimator = ObjectAnimator.ofInt(binding.progressBar1, "progress", 0, 60)
         progressAnimator.duration = 1000 // Duración de la animación en milisegundos
 
         progressAnimator.start()
